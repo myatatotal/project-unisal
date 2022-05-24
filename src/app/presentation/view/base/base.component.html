@@ -8,19 +8,23 @@
       <mat-menu #menu2="matMenu" [overlapTrigger]="false">
         <button mat-menu-item>
           <mat-icon>home</mat-icon>
-          <span>Home</span>
+          <!-- <span>Home</span> -->
+          <a routerLink="/homepage" routerLinkActive="active">Home</a>
         </button>
         <button mat-menu-item>
           <mat-icon>people_outline</mat-icon>
-          <span>Produtos</span>
+          <!-- <span>Produtos</span> -->
+          <a routerLink="/produtos" routerLinkActive="active">Produtos</a>
         </button>
         <button mat-menu-item>
           <mat-icon>videocam</mat-icon>
-          <span>Clientes</span>
+          <!-- <span>Clientes</span> -->
+          <a routerLink="/clientes" routerLinkActive="active">Clientes</a>
         </button>
         <button mat-menu-item>
           <mat-icon>exit_to_app</mat-icon>
-          <span>Categorias</span>
+          <!-- <span>Categorias</span> -->
+          <a routerLink="/categorias" routerLinkActive="active">Categorias</a>
         </button>
       </mat-menu>
     </span>
@@ -31,7 +35,7 @@
       <mat-icon>account_circle</mat-icon>
     </button>
   </mat-toolbar-row>
-  
+
 </mat-toolbar>
 
 <mat-menu #menu="matMenu" class="menu-user">
