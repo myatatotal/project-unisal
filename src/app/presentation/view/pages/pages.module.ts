@@ -4,20 +4,23 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { LoginModule } from './login/login.module';
 import { HomeModule } from './home/home.module';
+import { ProdutosModule } from './produtos/produtosModule';
 import { HomePageModule } from './homepage/homepagemodule';
-import { ProdutosComponent } from './produtos/produtos.component';
+
 import { ClientesComponent } from './clientes/clientes.component';
 import { CategoriasComponent } from './categorias/categorias.component';
-//import { HomepageComponent } from './homepage/homepage.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [ProdutosComponent, ClientesComponent, CategoriasComponent],
+  declarations: [ClientesComponent, CategoriasComponent],
   imports: [
     CommonModule,
     LoginModule,
     HomeModule,
+    ProdutosModule,
     HomePageModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [PagesRoutingModule]
 })

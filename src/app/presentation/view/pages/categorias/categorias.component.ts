@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ApiService } from '../../../../data/base/service';
+import { EmployeeModel } from '../../../../domain/interfaces/model/Model';
 
 @Component({
   selector: 'app-categorias',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriasComponent implements OnInit {
 
-  constructor() { }
+  formValue!: FormGroup;
+  employeeModelObj: EmployeeModel = new EmployeeModel();
+  employees: any;
+  isEditing: boolean = false;
 
-  ngOnInit() {
+  constructor(private formBuilder: FormBuilder, private api: ApiService) {}
+
+  panelOpenState = false;
+
+  ngOnInit(): void {
+    this.getAllEmployees();
   }
+
+  getAllEmployees() {
+    this.api.getCategorias().subscribe((resp) => {
+      this.employees = resp;
+    });
+  }
+
+  // deleteEmployee(id: string) {
+  //   this.api.delete(id).subscribe((resp) => {
+  //     this.getAllEmployees();
+  //     alert('Employee Deleted');
+  //   });
+  // }
+
+
+
 
 }

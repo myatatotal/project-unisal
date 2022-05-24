@@ -11,13 +11,13 @@ import { HomeComponent } from '../home/home.component';
 const routes: Routes = [
   RouteService.withShell([
     { path: '', redirectTo: '/homepage', pathMatch: 'full' },
-    {
-      path: 'home',
-      component: HomeComponent,
-      data: {
-        title: 'home'
-      }
-    },
+    // {
+    //   path: 'home',
+    //   component: HomeComponent,
+    //   data: {
+    //     title: 'home'
+    //   }
+    // },
     {
       path: 'homepage',
       component: HomepageComponent,

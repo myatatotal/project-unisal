@@ -1,1 +1,32 @@
-<p>categorias works!</p>
+<div class="container">
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <!-- <th scope="col">Quantidade</th>
+        <th scope="col">Código de Barras </th> -->
+        <!-- <th scope="col">Ação</th> -->
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let employee of employees">
+      <tr>
+        <td scope="col"> {{ employee.id }}</td>
+        <td scope="col"> {{ employee.cliente }}</td>
+        <td scope="col"> {{ employee.nome }}</td>
+        <td scope="col"> {{ employee.email }}</td>
+        <!-- <td scope="col"> {{ employee.quantidade }} </td>
+        <td scope="col"> {{ employee.codigobarras }}</td> -->
+        <!-- <td scope="col">
+          <button (click)="deleteEmployee(employee.id)" mat-button color="accent">
+            Deletar
+          </button>
+        </td> -->
+      </tr>
+    </tbody>
+
+  </table>
+</div>
